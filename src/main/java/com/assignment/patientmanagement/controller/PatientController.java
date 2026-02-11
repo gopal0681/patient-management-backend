@@ -17,10 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.assignment.patientmanagement.modals.Patient;
 import com.assignment.patientmanagement.service.PatientService;
 
-
+@CrossOrigin(origins = {"*"})
 @RestController
 @RequestMapping("/api/patients")
-@CrossOrigin(origins = "*")
 public class PatientController {
 
     @Autowired
