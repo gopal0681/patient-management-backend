@@ -17,7 +17,7 @@ public class Config {
                         .allowedOrigins(
                                 "http://localhost:3000",
                                 "http://localhost:3001",
-                                "https://your-frontend-name.onrender.com"
+                                "https://patient-management-backend-cnb4.onrender.com"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
