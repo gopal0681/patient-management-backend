@@ -1,0 +1,132 @@
+
+.content {
+  flex: 1;
+  padding: 30px 40px;
+  width: 100%;
+}
+
+.content h2 {
+ text-align: center;
+  margin: 20px 0 30px;
+  width: 92%;
+  color: #2c3e50;
+}
+
+
+table {
+  width: 93%;
+  max-width: 1400px;
+  min-height: 300px; /* ensures visual presence */
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+thead {
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  color: #ffffff;
+}
+
+thead th {
+  padding: 20px 28px;
+  font-size: 15px;
+  text-align: left;
+}
+
+
+tbody td {
+  padding: 18px 28px;
+  font-size: 15px;
+  border-bottom: 1px solid #1a0101;
+  color: #333;
+}
+
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+
+tbody tr:hover {
+  background-color: #eef5ff;
+}
+
+
+.action-buttons button {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.action-buttons button:hover {
+  background-color: #2980b9;
+}
+
+.action-buttons button:active {
+  transform: scale(0.97);
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+  background-color: #241311;
+}
+
+
+@media (max-width: 768px) {
+  table {
+    font-size: 13px;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+  }
+}
+
+
+td:nth-child(1) {
+  width: 110px; 
+  text-align: center;
+}
+
+th:last-child,
+td:last-child {
+  width: 300px; 
+  text-align: center;
+}
+
