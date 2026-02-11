@@ -36,5 +36,15 @@ public class PatientServiceImpl implements PatientService {
         return res.findById(id)
                 .orElseThrow(() -> new RuntimeException("Patient not found with id: " + id));
     }
+    
+    @Override
+    public void deletePatient(Long id) {
+
+        Patient patient = res.findById(id)
+                .orElseThrow(() ->
+                        new RuntimeException("Patient not found with id: " + id));
+
+        		res.delete(patient);
+    }
 
 }
