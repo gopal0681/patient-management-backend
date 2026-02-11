@@ -53,6 +53,6 @@ public class PatientController {
         patientService.deletePatient(id);
         return new ResponseEntity<>("Patient deleted successfully!", HttpStatus.OK);
     }
-    
+     
     
 }
