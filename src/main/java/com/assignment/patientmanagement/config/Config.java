@@ -13,15 +13,11 @@ public class Config {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
-                        .allowedOrigins(
-                                "http://localhost:3000",
-                                "http://localhost:3001",
-                                "https://patient-management-backend-cnb4.onrender.com"
-                        )
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*")
-                        .allowCredentials(true);
+            	registry.addMapping("/**")
+                .allowedOriginPatterns("*")   // 👈 IMPORTANT CHANGE
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true);
             }
         };
     }
