@@ -35,7 +35,7 @@ const AddPatient = () => {
   };
   return (
     <div className="row justify-content-center">
-      <div className="col-12 col-sm-10 col-md-6 col-lg-5">
+      <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
         <div className="form-container">
           <h3>Add New Patient</h3>
 
