@@ -40,13 +40,7 @@ h2 {
   transition: 0.2s ease-in-out;
 }
 
-
-td button {
-  margin: 0 5px;
-  min-width: 80px;
-}
-
-.action-buttons {
+.view-button {
   background-color: #0d6efd;
   color: white;
   border: none;
@@ -54,9 +48,11 @@ td button {
   border-radius: 4px;
   cursor: pointer;
   font-weight: 500;
+  margin: 0 5px;
+  min-width: 80px;
 }
 
-.action-buttons:hover {
+.view-button:hover {
   background-color: #0b5ed7;
 }
 
@@ -66,7 +62,9 @@ td button {
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
-  margin-left: 15px;
+  margin-left: 20px;
+  margin: 0 5px;
+  min-width: 80px;
 }
 
 .delete-btn:hover {
