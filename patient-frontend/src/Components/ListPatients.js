@@ -59,7 +59,8 @@ const ListPatients = () => {
                 <td>{patient.gender}</td>
                 <td>{patient.doctorName}</td>
                 <td>
-                  <button className="action-buttons" onClick={() => handleView(patient)}>
+                  <div className="action-buttons">
+                    <button className="view-button" onClick={() => handleView(patient)}>
                     View
                   </button>
                    <button
@@ -67,6 +68,7 @@ const ListPatients = () => {
                     onClick={() => handleDelete(patient.id)}>
                     Delete
                    </button>
+                  </div>
                 </td>
               </tr>
             ))}
