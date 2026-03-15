@@ -1,13 +1,13 @@
-package com.assignment.eemployeemanagement.service.impl;
+package com.assignment.employeemanagement.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.assignment.eemployeemanagement.modals.Employee;
-import com.assignment.eemployeemanagement.repositary.EmployeeRepository;
-import com.assignment.eemployeemanagement.service.EmployeeService;
+import com.assignment.employeemanagement.modals.Employee;
+import com.assignment.employeemanagement.repositary.EmployeeRepository;
+import com.assignment.employeemanagement.service.EmployeeService;
 
 
 @Service
@@ -16,12 +16,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeRepository res;
 
-    public EmployeeServiceImpl(EmployeeRepository eemployeeRepository) {
-        this.res = eemployeeRepository;
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+        this.res = employeeRepository;
     }
     @Override
-    public Employee addEmployee(Employee eemployee) {
-        return res.save(eemployee);
+    public Employee addEmployee(Employee employee) {
+        return res.save(employee);
     }
 
 
@@ -38,13 +38,13 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
     
     @Override
-    public void deleteEmployee(Long id) {
+    public void deletemployee(Long id) {
 
-        Employee eemployee = res.findById(id)
+        Employee employee = res.findById(id)
                 .orElseThrow(() ->
                         new RuntimeException("Employee not found with id: " + id));
 
-        		res.delete(eemployee);
+        		res.delete(employee);
     }
 
 }
