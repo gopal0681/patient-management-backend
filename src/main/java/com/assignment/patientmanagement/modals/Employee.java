@@ -1,7 +1,6 @@
-package com.assignment.patientmanagement.modals;
+package com.assignment.employeemanagement.modals;
 
 import jakarta.persistence.Column;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -9,16 +8,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Data;
-
 
 @Entity
-@Table(name = "patients")
-public class Patient {
+@Table(name = "employees")
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "full_name", nullable = false)
     private String fullName;
@@ -30,10 +27,10 @@ public class Patient {
     @Column(name = "department")
     private String department;
     
-    @Column(name = "doctor_name", nullable = true)
+    @Column(name = "salary", nullable = true)
     private Double salary;
 
-    public Patient() {
+    public Employee() {
     }
 
     public Long getId() {
@@ -60,19 +57,19 @@ public class Patient {
         this.gender = gender;
     }
 
-    public String getdepartment() {
+    public String getDepartment() {
         return department;
     }
 
-    public void setdepartment(String department) {
+    public void setDepartment(String department) {
         this.department = department;
     }
 
-    public String getDouble salary() {
-        return Double salary;
+    public Double getSalary() {
+        return salary;
     }
 
-    public void setDouble salary(Double salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
 
